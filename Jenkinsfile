@@ -3,6 +3,14 @@
     agent any
 
     stages {
+            stage('CleaningWorkspace')
+		{
+			steps
+			{
+				cleanWs
+			}
+		}
+
         stage('Checkout') {
             steps {
                 git 'https://github.com/im-faix/Quality-Check-Project.git'
